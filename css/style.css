@@ -8,6 +8,13 @@ html {
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: 'NexonCartGothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2312-1@1.1/KartriderBold.woff2') format('woff2');
+    font-weight: 700;
+    font-display: swap;
+}
+
 ul {
     list-style: none;
 }
@@ -20,12 +27,141 @@ a {
 body {
     font-family: "Noto Sans KR", sans-serif;
     color: #333333;
+    background: url(../img/bg.jpg) no-repeat;
     background-color: #F5F3FF;
 }
 
 h1,
 h2,
-h3 {
-    font-family: "Do Hyeon", sans-serif;
+h3,
+.log {
+    font-family: "NexonCartGothic", sans-serif;
     font-weight: normal;
+}
+
+
+header {
+    padding: 0 120px;
+    position: sticky;
+    top: 0;
+    height: 76px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 3;
+    background: linear-gradient(to bottom, #000000b4, transparent);
+    color: #fff;
+}
+.log {
+    font-size: 2.6rem;
+}
+nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 26px;
+    font-size: 1.8rem;
+}
+.hero {
+    width: 100%;
+    height: 510px;
+    background: url(../img/top-img.JPG) no-repeat center/cover;
+}
+.hero-txt {
+    max-width: 1200px;
+    margin: auto;
+    align-items: center;
+}
+.hero h2 {
+    font-size: 5.6rem;
+}
+.hero p {
+    font-size: 2.0rem;
+    margin-bottom: 35px;
+}
+.btn {
+    font-size: 1.6rem;
+    background-color: #333;
+    color: #fff;
+    border-radius: 40px;
+    padding: 15px 28px;
+}
+
+main {
+    max-width: 1200px;
+    margin: auto;
+}
+.profile {
+    margin-top: -80px;
+    margin-bottom: 36px;
+    background-color: #CBE3FA;
+    border-radius: 26px;
+    display: flex;
+    padding: 26px;
+    gap: 26px;
+    align-items: center;
+}
+.avatar {
+    background-color: #fff;
+    padding: 24px;
+    font-size: 5.2rem;
+    border-radius: 80px;
+}
+.intro {
+    margin-right: 600px;
+    
+}
+.intro h3 {
+    font-size: 2.6rem;
+}
+.intro p {
+    font-size: 1.8rem;
+}
+.tags {
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: end;
+    gap: 6px;
+}
+.tags li {
+    padding: 6px 12px;
+    background-color: #fff;
+    border-radius: 30px;
+}
+
+h2 {
+    font-size: 3.8rem;
+}
+
+.post {
+    display: flex;
+    gap: 50px;
+    padding: 40px;
+    margin-bottom: 36px;
+    background-color: #fff;
+    border-radius: 26px;
+    border: 3px solid #CBE3FA;
+}
+.cate {
+    font-size: 1.6rem;
+}
+.info h3 {
+    font-size: 2.4rem;
+}
+.info p {
+    font-size: 1.6rem;
+}
+.info a {
+    font-size: 1.4rem;
+}
+
+
+
+footer {
+    padding: 20px 0;
+    background-color: #2E4580;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    font-size: 1.6rem;
 }
