@@ -1,5 +1,5 @@
 html {
-    font-size: 62.5%;
+    font-size: 62.5%;        scroll-behavior: smooth;
 }
 
 * {
@@ -27,7 +27,7 @@ a {
 body {
     font-family: "Noto Sans KR", sans-serif;
     color: #333333;
-    background: url(../img/bg.jpg) no-repeat;
+    background: url(../img/bg.jpg) repeat-y;
     background-color: #F5F3FF;
 }
 
@@ -64,15 +64,21 @@ nav ul {
 .hero {
     width: 100%;
     height: 510px;
+    margin-top: -80px;
     background: url(../img/top-img.JPG) no-repeat center/cover;
+    position: relative;
+    display: flex;
+    align-items: center;
 }
 .hero-txt {
+    width: 100%;
     max-width: 1200px;
-    margin: auto;
+    margin: 0 auto;
     align-items: center;
 }
 .hero h2 {
     font-size: 5.6rem;
+    margin-bottom: 15px;
 }
 .hero p {
     font-size: 2.0rem;
@@ -91,6 +97,7 @@ main {
     margin: auto;
 }
 .profile {
+    position: relative;
     margin-top: -80px;
     margin-bottom: 36px;
     background-color: #CBE3FA;
@@ -99,16 +106,16 @@ main {
     padding: 26px;
     gap: 26px;
     align-items: center;
+    z-index: 2;
 }
 .avatar {
     background-color: #fff;
-    padding: 24px;
+    padding: 18px 24px;
     font-size: 5.2rem;
     border-radius: 80px;
 }
 .intro {
-    margin-right: 600px;
-    
+    flex-grow: 1;
 }
 .intro h3 {
     font-size: 2.6rem;
@@ -120,7 +127,7 @@ main {
     font-size: 1.6rem;
     display: flex;
     justify-content: end;
-    gap: 6px;
+    gap: 8px;
 }
 .tags li {
     padding: 6px 12px;
@@ -130,31 +137,107 @@ main {
 
 h2 {
     font-size: 3.8rem;
+    margin-top: 70px;
+    margin-bottom: 20px;
 }
 
 .post {
     display: flex;
-    gap: 50px;
+    gap: 40px;
     padding: 40px;
     margin-bottom: 36px;
     background-color: #fff;
     border-radius: 26px;
     border: 3px solid #CBE3FA;
 }
+.thumb{
+    width: 400px;
+    height: 240px;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.thumb img {
+    width: 110%;
+    height: 110%;
+    object-fit: cover;
+    display: block;
+}
+.post:nth-child(3) {
+    flex-direction: row-reverse;
+}
+.info {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 240px;
+}
 .cate {
     font-size: 1.6rem;
+    margin-bottom: 12px;
+    color: #999;
 }
 .info h3 {
     font-size: 2.4rem;
+    margin-bottom: 12px;
 }
 .info p {
     font-size: 1.6rem;
+    line-height: 1.6;
 }
-.info a {
+.info .more {
     font-size: 1.4rem;
+    margin-top: auto;
+    color: #469CFF;
 }
 
-
+.photos {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 32px;
+    margin-bottom: 90px;
+}
+.photos li {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    grid-column: span 2;
+}
+.photos li:nth-child(4) {
+    grid-column: span 3;
+}
+.photos li:nth-child(5) {
+    grid-column: span 3;
+}
+.photos li img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 20px;
+}
+.photos li .caption {
+    font-family: "NexonCartGothic", sans-serif;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
+}
+.photos li .caption strong {
+    display: block;
+    font-size: 2.6rem;
+    margin-bottom: 10px;
+}
+.photos li .caption p {
+    display: block;
+    font-size: 2.0rem;
+}
 
 footer {
     padding: 20px 0;
@@ -162,6 +245,19 @@ footer {
     color: #fff;
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 16px;
     font-size: 1.6rem;
+}
+
+.top {
+    position: fixed;
+    right: 30px;
+    bottom: 120px;
+    z-index: 5;
+    background-color: #333;
+    color: #fff;
+    font-size: 1.6rem;
+    padding: 24px 17px;
+    border-radius: 50px;
 }
