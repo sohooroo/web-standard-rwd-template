@@ -209,6 +209,10 @@ h2 {
     gap: 32px;
     margin-bottom: 90px;
 }
+.photos li img:hover {
+    transform: scale(1.05);
+    transition: transform 0.5s;
+}
 .photos li {
     position: relative;
     border-radius: 2rem;
