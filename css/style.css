@@ -14,6 +14,12 @@ html {
     font-weight: 700;
     font-display: swap;
 }
+@font-face {
+    font-family: 'NexonCartGothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2312-1@1.1/KartriderMedium.woff2') format('woff2');
+    font-weight: 500;
+    font-display: swap;
+}
 
 ul {
     list-style: none;
@@ -25,9 +31,9 @@ a {
 }
 
 body {
-    font-family: "Noto Sans KR", sans-serif;
+    font-family: "Pretendarad", sans-serif;
     color: #333333;
-    background: url(../img/bg.jpg) repeat-y;
+    background: url(../img/bg.jpg);
     background-color: #F5F3FF;
 }
 
@@ -36,7 +42,7 @@ h2,
 h3,
 .log {
     font-family: "NexonCartGothic", sans-serif;
-    font-weight: normal;
+    font-weight: 700;
 }
 
 
@@ -78,11 +84,13 @@ nav ul {
 }
 .hero h2 {
     font-size: 5.6rem;
+    margin-top: 0;
     margin-bottom: 15px;
 }
 .hero p {
     font-size: 2.0rem;
     margin-bottom: 35px;
+    padding-left: 3px;
 }
 .btn {
     font-size: 1.6rem;
@@ -182,6 +190,7 @@ h2 {
 }
 .info h3 {
     font-size: 2.4rem;
+    font-weight: 700;
     margin-bottom: 12px;
 }
 .info p {
@@ -202,7 +211,7 @@ h2 {
 }
 .photos li {
     position: relative;
-    border-radius: 20px;
+    border-radius: 2rem;
     overflow: hidden;
     grid-column: span 2;
 }
@@ -217,7 +226,7 @@ h2 {
     height: 100%;
     object-fit: cover;
     display: block;
-    border-radius: 20px;
+    border-radius: 2rem;
 }
 .photos li .caption {
     font-family: "NexonCartGothic", sans-serif;
@@ -232,11 +241,12 @@ h2 {
 .photos li .caption strong {
     display: block;
     font-size: 2.6rem;
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
 }
 .photos li .caption p {
     display: block;
     font-size: 2.0rem;
+    font-weight: 500;
 }
 
 footer {
@@ -255,9 +265,9 @@ footer {
     right: 30px;
     bottom: 120px;
     z-index: 5;
-    background-color: #333;
+    background-color: #3333338f;
     color: #fff;
     font-size: 1.6rem;
-    padding: 24px 17px;
+    padding: 24px 20px;
     border-radius: 50px;
 }
