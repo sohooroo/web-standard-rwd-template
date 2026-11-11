@@ -1,5 +1,6 @@
 html {
-    font-size: 62.5%;        scroll-behavior: smooth;
+    font-size: 62.5%;
+    /* scroll-behavior: smooth; */
 }
 
 * {
@@ -264,7 +265,7 @@ footer {
     font-size: 1.6rem;
 }
 
-.top {
+.fixedTop {
     position: fixed;
     right: 30px;
     bottom: 120px;
@@ -274,4 +275,14 @@ footer {
     font-size: 1.6rem;
     padding: 24px 20px;
     border-radius: 50px;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(30px);
+    transition: all 0.3s ;
+}
+body.scroll .fixedTop {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
 }
