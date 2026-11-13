@@ -41,7 +41,7 @@ body {
 h1,
 h2,
 h3,
-.log {
+.logo {
     font-family: "NexonCartGothic", sans-serif;
     font-weight: 700;
 }
@@ -59,7 +59,7 @@ header {
     background: linear-gradient(to bottom, #000000b4, transparent);
     color: #fff;
 }
-.log {
+.logo {
     font-size: 2.6rem;
 }
 nav ul {
@@ -379,4 +379,8 @@ body.scroll .fixedTop {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
+}
+
+.mob-nav-btn {
+    display: none;
 }
