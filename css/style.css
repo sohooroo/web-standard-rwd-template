@@ -41,7 +41,7 @@ body {
 h1,
 h2,
 h3,
-.log {
+.logo {
     font-family: "NexonCartGothic", sans-serif;
     font-weight: 700;
 }
@@ -59,7 +59,7 @@ header {
     background: linear-gradient(to bottom, #000000b4, transparent);
     color: #fff;
 }
-.log {
+.logo {
     font-size: 2.6rem;
 }
 nav ul {
@@ -68,7 +68,7 @@ nav ul {
     gap: 26px;
     font-size: 1.8rem;
 }
-.hero {
+/* .hero {
     width: 100%;
     height: 510px;
     margin-top: -80px;
@@ -82,7 +82,7 @@ nav ul {
     max-width: 1200px;
     margin: 0 auto;
     align-items: center;
-}
+} */
 .hero h2 {
     font-size: 5.6rem;
     margin-top: 0;
@@ -100,6 +100,59 @@ nav ul {
     border-radius: 40px;
     padding: 15px 28px;
 }
+
+/* 스와이프 */
+.gallery {
+    height: 510px;
+    margin-top: -80px;
+}
+.gallery .swiper-slide{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.gallery .swiper-slide.s01{
+    background-image: url(../img/top-img.JPG);
+}
+.gallery .swiper-slide.s02{
+    background-image: url(../img/top-img-2.JPG);
+}
+.gallery .swiper-slide.s03{
+    background-image: url(../img/top-img-3.JPG);
+}
+.inner {
+    max-width: 1200px;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.hero-txt {
+    transition: all .3s 0.5s;
+    opacity: 0;
+    transform: translateY(30px);
+}
+.swiper-slide-active .hero-txt {
+    transform: translateY(0);
+    opacity: 1;
+}
+.arrow{
+    background-color: #ffffff3d;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border-radius: 7px;
+}
+.arrow svg{
+    display: none;
+}
+.swiper-button-next{
+    background-image: url(../img/right.png);
+}
+.swiper-button-prev{
+    background-image: url(../img/left.png);
+}
+
 
 main {
     max-width: 1200px;
@@ -204,6 +257,100 @@ h2 {
     color: #469CFF;
 }
 
+/* === 현상소 추천 === */
+.shop-tabs {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 5rem;
+}
+.shop-tabs button {
+    padding: 1.2rem 6rem;
+    border: none;
+    border-radius: 3rem;
+    background-color: #fff;
+    color: #999;
+    font-family: inherit;
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.shop-tabs li.on button {
+    background-color: #73C0FF;
+    color: #fff;
+}
+.shop-content {
+    display: flex;
+    gap: 2.4rem;
+    height: 22rem;
+}
+.shop-content li {
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 1.2rem;
+    padding: 2.4rem;
+    border-radius: 2rem;
+    background-color: #fff;
+    overflow: hidden;
+    cursor: pointer;
+    transition: flex 0.4s, background-color 0.4s;
+}
+.shop-content .num {
+    position: absolute;
+    top: 0.8rem;
+    right: 2.4rem;
+    font-family: "NexonCartGothic", sans-serif;
+    font-weight: 700;
+    font-size: 4.6rem;
+    color: #e5e5e5;
+}
+.shop-content .badge {
+    position: absolute;
+    top: 2.4rem;
+    left: 2.4rem;
+    padding: 0.4rem 1.2rem;
+    border-radius: 2rem;
+    background-color: #FFF2BC;
+    color: #73C0FF;
+    font-size: 1.3rem;
+    font-weight: bold;
+    opacity: 0;
+    transform: translateY(-1rem);
+    transition: 0.4s;
+}
+.shop-content h3 {
+    font-size: 2.2rem;
+    color: #999;
+    font-family: "NexonCartGothic", sans-serif;
+    margin-bottom: 0.6rem;
+}
+.shop-content p {
+    font-size: 1.5rem;
+    color: #999;
+}
+
+.shop-content li.on {
+    flex: 1.6;
+    background-color: #73C0FF;
+}
+.shop-content li.on .badge {
+    opacity: 1;
+    transform: none;
+}
+.shop-content li.on h3 {
+    font-size: 3rem;
+    color: #fff;
+}
+.shop-content li.on p {
+    color: #fff;
+}
+.shop-content li.on .num {
+    color: #FFF2BC;
+}
+
+
 .photos {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -285,4 +432,8 @@ body.scroll .fixedTop {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
+}
+
+.mob-nav-btn {
+    display: none;
 }

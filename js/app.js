@@ -1,5 +1,58 @@
+// 현상소 추천 탭
+const tabs = document.querySelectorAll(".shop-tabs li");
+const cards = document.querySelectorAll(".shop-content li");
+const swiper = new Swiper('.gallery', {
+    navigation: {
+        nextEl: '.gallery .swiper-button-next',
+        prevEl: '.gallery .swiper-button-prev',
+    },
+    pagination: {
+        el: '.gallery .swiper-pagination',
+    },
+    loop:true
+});
+
+
+function showGuide(index) {
+    // 1. 전부 on 빼기
+    tabs.forEach((tab) => tab.classList.remove("on"));
+    cards.forEach((card) => card.classList.remove("on"));
+    // 2. 선택한 번호에만 on 붙이기
+    tabs[index].classList.add("on");
+    cards[index].classList.add("on");
+}
+
+tabs.forEach((tab, index) => {
+    tab.addEventListener("click", () => showGuide(index));
+});
+cards.forEach((card, index) => {
+    card.addEventListener("click", () => showGuide(index));
+});
+
 const body = document.querySelector('body')
 const fixedTopBtn = document.querySelector('.fixedTop');
+const mNavBtn = document.querySelector('.mob-nav-btn')
+const navBtns = document.querySelectorAll('nav ul li a')
+
+console.log(navBtns.length)
+
+navBtns.forEach(btn=>{
+    btn.addEventListener('click',()=>{
+        e.preventDefault()
+
+        const id = btn.getAttribute('href')
+        const target = document.querySelector(id)
+        const headerH = document.querySelector('header').offsetHeight
+        window.scrollTo({
+            top:target.offsetTop,
+            behavior:'smooth'
+        })
+        body.classList.remove('m-nav-open')
+    })
+})
+
+
+
 
 // 1. 상단으로 부드럽게 이동
 fixedTopBtn.addEventListener('click', function(e) {
@@ -19,3 +72,8 @@ window.addEventListener('scroll', function() {
         document.body.classList.remove('scroll');
     }
 });
+
+mNavBtn.addEventListener('click',(e)=>{
+    e.preventDefault()
+    body.classList.toggle('m-nav-open')
+})
