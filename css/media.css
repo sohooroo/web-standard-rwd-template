@@ -126,6 +126,7 @@
     }
     .thumb {
         width: 100%;
+        height: 18rem;
     }
     .info {
         min-height: 21rem;
@@ -181,7 +182,8 @@
     .photos {
         gap: 2rem;
         grid-template-columns: repeat(4,1fr);
-        grid-template-rows: repeat(3,30rem);
+        grid-template-rows: repeat(3,21rem);
+
     }
     .photos li:nth-child(3) {
         display: none;
