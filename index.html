@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/media.css">
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css"/>
 
     <meta name="description" content="일상의 순간을 필름 카메라로 기록하는 개인 아카이브 블로그입니다.">
     <meta name="keywords" content="디자인, 필름사진, 일상기록, 포트폴리오, 아카이브">
@@ -33,14 +34,42 @@
             </a>
     </header>
     <section class="hero">
-        <div class="inner">
-            <div class="hero-txt">
-                <h2>일상을 기록하는 카메라들</h2>
-                <p>3가지 카메라의 주요 사양과 사용기</p>
-                <a href="#posts" class="btn">최신 글 보기</a>
+        <div class="swiper gallery">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide s01">
+                    <div class="inner">
+                        <div class="hero-txt">
+                            <h2>일상을 기록하는 카메라들</h2>
+                            <p>3가지 카메라의 주요 사양과 사용기</p>
+                            <a href="#posts" class="btn">최신 글 보기</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide s02">
+                    <div class="inner">
+                        <div class="hero-txt">
+                            <h2>일상을 기록하는 카메라들</h2>
+                            <p>3가지 카메라의 주요 사양과 사용기</p>
+                            <a href="#posts" class="btn">최신 글 보기</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide s03">
+                    <div class="inner">
+                        <div class="hero-txt">
+                            <h2>일상을 기록하는 카메라들</h2>
+                            <p>3가지 카메라의 주요 사양과 사용기</p>
+                            <a href="#posts" class="btn">최신 글 보기</a>
+                        </div>
+                    </div>
+                </div>
             </div>
+            <div class="swiper-button-next arrow"></div>
+            <div class="swiper-button-prev arrow"></div>
+            <div class="swiper-pagination"></div>
         </div>
     </section>
+
     <main>
         <section class="profile">
             <p class="avatar">🐵</p>
@@ -175,6 +204,7 @@
         <p>새로운 필름 한 롤을 다 찍으면 업데이트 합니다</p>
     </footer>
     <a href="#" class="fixedTop">TOP</a>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
     <script src="./js/app.js"></script>
 </body>
 </html>

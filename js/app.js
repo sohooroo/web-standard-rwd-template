@@ -1,6 +1,17 @@
 // 현상소 추천 탭
 const tabs = document.querySelectorAll(".shop-tabs li");
 const cards = document.querySelectorAll(".shop-content li");
+const swiper = new Swiper('.gallery', {
+    navigation: {
+        nextEl: '.gallery .swiper-button-next',
+        prevEl: '.gallery .swiper-button-prev',
+    },
+    pagination: {
+        el: '.gallery .swiper-pagination',
+    },
+    loop:true
+});
+
 
 function showGuide(index) {
     // 1. 전부 on 빼기
