@@ -99,7 +99,15 @@
         align-items: center;
     }
     .hero h2 {
-        font-size: 4.2rem;
+        font-size: 3.8rem;
+    }
+    .hero p {
+        font-size: 1.6rem;
+    }
+    .btn {
+        font-size: 1.4rem;
+        border-radius: 40px;
+        padding: 12px 24px;
     }
 
     .profile {
@@ -111,6 +119,7 @@
     }
     .post,
     .post:nth-of-type(even) {
+        padding: 2.5rem;
         flex-direction: column;
         align-items: stretch;
         gap: 1.6rem;
@@ -126,13 +135,27 @@
         margin-bottom: -1rem;
     }
 
+    .intro h3 {
+        font-size: 2.2rem;
+    }
+    .intro p {
+        font-size: 1.4rem;
+    }
+    .tags {
+        font-size: 1.3rem;
+    }
+    .tags li {
+        padding: 4px 12px;
+    }
+
+
 
     .shop-tabs {
         overflow-x: auto;
         /* 탭은 옆으로 밀기 */
     }
     .shop-tabs button {
-        padding: 1.2rem 3.6rem;
+        padding: 1.2rem 1.8rem;
     }
     .shop-content {
         flex-direction: column;
