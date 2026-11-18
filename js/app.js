@@ -1,3 +1,7 @@
+AOS.init({
+    duration: 1000,
+});
+
 // 현상소 추천 탭
 const tabs = document.querySelectorAll(".shop-tabs li");
 const cards = document.querySelectorAll(".shop-content li");

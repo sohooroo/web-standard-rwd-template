@@ -3,7 +3,7 @@
 }
 @media screen and (max-width:768px) {
     .inner,main {
-        padding: 0 3rem;
+        padding: 0 2.4rem;
     }
     header {
         padding: 1rem 3rem;
@@ -87,6 +87,10 @@
         top: 48%;
     }
 
+    .gallery {
+        height: 700px;
+    }
+
     .hero {
         height: 46rem;
     }
@@ -113,13 +117,13 @@
     .profile {
         flex-direction: column;
         gap: 1.2rem;
-        margin-top: -6rem;
+        margin-top: 10rem;
         padding: 3.4rem 2rem;
         text-align: center;
     }
     .post,
     .post:nth-of-type(even) {
-        padding: 2.5rem;
+        padding: 1.6rem;
         flex-direction: column;
         align-items: stretch;
         gap: 1.6rem;
@@ -133,7 +137,6 @@
     }
     .info .more {
         margin-top: 2rem;
-        margin-bottom: -1rem;
     }
 
     .intro h3 {
@@ -144,6 +147,7 @@
     }
     .tags {
         font-size: 1.3rem;
+        flex-wrap: wrap;
     }
     .tags li {
         padding: 4px 12px;
@@ -152,11 +156,11 @@
 
 
     .shop-tabs {
-        overflow-x: auto;
-        /* 탭은 옆으로 밀기 */
+        display: flex;
+        flex-wrap: wrap;
     }
     .shop-tabs button {
-        padding: 1.2rem 1.8rem;
+        padding: 1.2rem 2.5rem;
     }
     .shop-content {
         flex-direction: column;
@@ -205,6 +209,7 @@
 
 
     footer {
+        font-size: 1.3rem;
         flex-direction: column;
         gap: 0.4rem;
         text-align: center;

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/media.css">
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <meta name="description" content="일상의 순간을 필름 카메라로 기록하는 개인 아카이브 블로그입니다.">
     <meta name="keywords" content="디자인, 필름사진, 일상기록, 포트폴리오, 아카이브">
@@ -85,7 +86,7 @@
         </section>
         <section id="posts">
             <h2>최신 글</h2>
-            <article class="post">
+            <article class="post" data-aos="fade-right">
                 <div class="thumb">
                     <img src="./img/canon-n130.jpg" alt="캐논 오토보이 n130">
                 </div>
@@ -98,7 +99,7 @@
                     <a href="#" class="more">더읽기 →</a>
                 </div>
             </article>
-            <article class="post">
+            <article class="post" data-aos="fade-left" data-aos-delay="50">
                 <div class="thumb">
                     <img src="./img/canon-ae1.jpeg" alt="캐논 ae-1">
                 </div>
@@ -111,7 +112,7 @@
                     <a href="#" class="more">더읽기 →</a>
                 </div>
             </article>
-            <article class="post">
+            <article class="post" data-aos="fade-right" data-aos-delay="100">
                 <div class="thumb">
                     <img src="./img/fujiA220.jpg" alt="후지필름 a220">
                 </div>
@@ -163,34 +164,34 @@
         <section id="photos">
             <h2>사진첩</h2>
             <ul class="photos">
-                <li>
+                <li data-aos="fade-up">
                     <img src="./img/01.jpeg" alt="이미지1">
                     <div class="caption">
                         <strong>캐논 오토보이 n130</strong>
                         <p>코닥 컬러플러스 200</p>
                     </div>
                 </li>
-                <li>
+                <li data-aos="fade-up" data-aos-delay="50">
                     <img src="./img/02.jpeg" alt="이미지2">
                     <div class="caption">
                         <strong>캐논 ae-1</strong>
                         <p>후지 200</p>
                     </div>
                 </li>
-                <li>
+                <li data-aos="fade-up" data-aos-delay="100">
                     <img src="./img/03.jpg" alt="이미지3">
                     <div class="caption">
                         <strong>후지 a220</strong>
                     </div>
                 </li>
-                <li>
+                <li data-aos="fade-up" data-aos-delay="150">
                     <img src="./img/04.JPG" alt="이미지4">
                     <div class="caption">
                         <strong>캐논 ae-1</strong>
                         <p>코닥 울트라맥스 400</p>
                     </div>
                 </li>
-                <li>
+                <li data-aos="fade-up" data-aos-delay="200">
                     <img src="./img/05.JPG" alt="이미지5">
                     <div class="caption">
                         <strong>많은 필름들!</strong>
@@ -204,6 +205,7 @@
         <p>새로운 필름 한 롤을 다 찍으면 업데이트 합니다</p>
     </footer>
     <a href="#" class="fixedTop">TOP</a>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
     <script src="./js/app.js"></script>
 </body>
